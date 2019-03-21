@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人网页</title>
+   <link rel="stylesheet" href="../css/personal.css">
+   <link rel="stylesheet" href="../css/image-hover-main.css">
+   <link rel="stylesheet" href="../css/image-hover.css">
+   <script src="../js/browserCheck.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="center">
+            <div class="zhuye"> <p>个人主页</p> </div>
+             <div>
+                 <p class="line"></p>
+             </div> 
+          <div class="top-type">
+          <a href="#about">简介</a>
+          <a href="#work">作业</a>
+          <a href="#zuji">足迹</a>
+           </div>
+        </div>     
+    </div>
+    <div class="box">
+            <div class="box">
+                <div class="describe">
+                   <img src="../images/flower.jpg" alt="">
+                    <p>宠辱不惊，看庭前花开花落;<br>去留无意，望天外云卷云舒</p>  
+               </div>  
+            </div>
+    </div>
+     <div class="contain">
+          <div class="container-about dream" data-animate="about-jianjie,1s,linear">
+                  <p class="about-line"></p>
+             <p class="about-my" id="about">个人简介</p>
+             </div>
+         <div class="container-type dream" data-animate="fly,1s,linear">
+            
+            
+               <img class="container-pic" src="../images/banner2.jpg" alt="">
+               <div class="jianjie">
+                <p>姓名：李爱华</p>
+               <p>性别：男</p>
+               <p>生日：1998 08 15</p>
+               <p>星座：狮子座</p>
+               <p>家乡：湖北</p>
+               <p>学校：武汉工程大学</p>
+               <p>爱好：羽毛球、游戏、音乐</p>
+               <p>梦想：做一条无忧无虑的咸鱼</p>
+               </div>  
+         </div>
+        <div id="work">
+                <div class="container-about dream" data-animate="zuopin,1s,linear">
+                        <p class="about-line"></p>
+                   <p class="about-my">作品展示</p>
+                   </div>
+         <div class="container-work dream" data-animate="works,2s,linaer">
+            
+             <img src="../images/02.jpg" alt="">
+             <div class="juzhong">
+            <div class="link-work">
+            <p><a href="../homework/html/index.html" target="_blank">诗意生活</a></p> 
+            <p><a href="../homework/html/work02.html" target="_blank">个人网站</a></p> 
+            <p><a href="../homework/html/关于远大.html"target="_blank">关于远大</a></p> 
+            <p><a href="../homework/html/地板评测.html"target="_blank">地板评测</a></p> 
+            <p><a href="../homework/html/小米商城.html"target="_blank">小米商城</a></p> 
+            <p><a href="../homework/html/生活家具.html"target="_blank">生活家具</a></p> 
+            <p><a href="../homework/html/01家具医生.html"target="_blank">家具医生</a></p> 
+            <p><a href="../homework/html/小米官网.html"target="_blank">小米官网</a></p> 
+            <p><a href="../homework/html/木兮地板.html"target="_blank">木兮地板</a></p> 
+             </div>
+             </div>
+            </div>
+         </div>
+         
+         <div id="zuji" class="dream" data-animate="zuji,2s,linaer">
+		<div id="container">
+                <div class="container-about dream" data-animate="zuji,1s,linear">
+                        <p class="about-line"></p>
+                   <p class="about-zuji">足迹</p>
+                   </div>
+			<div id="image-container">
+				<div class="img" id="img-1">
+					<div class="mask"></div>
+					<img src="../images/01.jpg">
+				</div>	
+				<div class="img" id="img-2">
+					<div class="mask"></div>
+					<img src="../images/07.jpg">
+				</div>	
+				<div class="img" id="img-3">
+					<div class="mask" id="mask-1"></div>
+					<div class="mask" id="mask-2"></div>
+					<img src="../images/05.jpg">
+				</div>	
+				<div class="img" id="img-4">
+					<div class="mask"></div>
+					<img src="../images/04.jpg">
+				</div>	
+				<div class="img" id="img-5">
+					<div class="mask"></div>
+					<img src="../images/06.jpg">
+				</div>	
+				<div class="img" id="img-6">
+					<div class="mask"></div>
+					<img src="../images/08.jpg">
+				</div>	
+				<div class="clearfix"></div>
+			</div>
+		      <div class="clearfix"></div>
+			<br>
+			<div id="warning" style="margin-top: 20px; text-align: center;"></div>
+     </div>
+</div>
+<div class="end"  id="END">
+             <p><a href="#">END</a> </p> 
+</div>
+     <script>
+            var window_height= document.documentElement.clientHeight;
+            window.onresize=function () {
+                window_height=document.documentElement.clientHeight;
+            };
+            var My_dream=document.getElementsByClassName('dream');
+            window.onscroll = function(){
+                var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                for (var k=0;k<My_dream.length;k++){
+                    if (_scrollTop>= getOffsetTop(My_dream[k]) - window_height && _scrollTop<= getOffsetTop(My_dream[k]) ){
+                        My_dream[k].style.animationName=My_dream[k].dataset.animate.split(',')[0];
+                        My_dream[k].style.animationDuration=My_dream[k].dataset.animate.split(',')[1];
+                        My_dream[k].style.animationTimingFunction=My_dream[k].dataset.animate.split(',')[2];
+                    }
+                }
+            };
+            function getOffsetTop(ele) {
+                var rtn = ele.offsetTop;
+                var o = ele.offsetParent;
+                while(o!=null)
+                {
+                    rtn += o.offsetTop;
+                    o = o.offsetParent;
+                }
+                return rtn;
+            }
+             
+            function my_animation() {
+                var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                for (var k=0;k<My_dream.length;k++){
+                    if (_scrollTop>= getOffsetTop(My_dream[k]) - window_height && _scrollTop<= getOffsetTop(My_dream[k]) ){
+                        My_dream[k].style.animationName=My_dream[k].dataset.animate.split(',')[0];
+                        My_dream[k].style.animationDuration=My_dream[k].dataset.animate.split(',')[1];
+                        My_dream[k].style.animationTimingFunction=My_dream[k].dataset.animate.split(',')[2];
+                    }
+                }
+            }
+            my_animation();
+          </script>
+
+</body>
+</html>

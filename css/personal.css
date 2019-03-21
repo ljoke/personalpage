@@ -1,0 +1,205 @@
+*{margin: 0;padding: 0}
+.top{
+    height: 700px;
+    width: auto;
+    /* background: rgb(58, 56, 56); */
+    position: relative;
+}
+.center{
+  width: 200px;
+  height: 100px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   margin: auto;
+   animation: topAnimation 3s linear;
+}
+.zhuye{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.line{
+    width: 200px;
+    height: 1px;
+    background: white;
+    text-align: center;
+}
+.top-type>a{
+text-decoration: none;
+color: aliceblue;
+}
+.top-type{
+    text-align: center;
+    margin-top: 10px;
+}
+@keyframes topAnimation{
+    0%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.box{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+.describe{
+    text-align: center;
+    color: rgb(115, 158, 214);
+}
+/* .describe>p{
+    font-size: 20px;
+} */
+.contain{
+    width: 1000px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-type{
+    position: relative;
+}
+.container-pic{
+    width: 500px;
+    height: 400px;
+}
+.jianjie{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.jianjie>p{
+    color: rgb(50, 156, 189);
+    margin-bottom: 27px;
+}
+@keyframes fly{
+    0%{
+        left: -1000px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+opacity: 1;    }
+}
+
+ @keyframes works{
+    0%{
+        right: -1000px;
+        opacity: 0;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+} 
+ @keyframes zuji{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+
+        opacity: 1;
+    }
+} 
+
+.container-work>img{
+    height: 400px;
+    width: 500px;
+    top: 21px;
+    right: 0;
+    position: absolute;
+}
+.container-work{
+    position: relative;
+    margin-top: 50px;
+}
+.link-work>p>a{
+    text-decoration: none;
+    color: rgb(50, 156, 189);
+}
+
+.link-work{
+    position: absolute;
+    left: 0;
+    top: 0;}
+    
+.link-work>p{
+    margin-bottom: 25px;
+}
+.link-work>p:first-child{
+    margin-top: 25px;
+}
+.container-zuji>img{
+    width: 100px;
+    height: 80px;
+}
+.about-line{
+    height: 1px;
+    width: 1000px;
+    text-align: center;
+    background: white;
+    
+}
+.about-my,.about-zuji{
+    color: white;
+    position: absolute;
+    top: -11px;
+    left: 480px;
+}
+.container-about{
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 50px;
+}
+@keyframes about-jianjie{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+} 
+@keyframes zuopin{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+} 
+.end{
+    width: 100%;
+    height: 100px;
+}
+.end>p{
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
